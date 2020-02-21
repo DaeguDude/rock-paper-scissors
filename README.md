@@ -6,10 +6,10 @@ What we've learned here was,
 * DOM Manipulation
 * Javascript Events Handling
 
-It was a fun experience, because with the knowledges we've learned,
-I could actually make something.
-That had me a feeling of actually I was capable of being a programmer.
-Well done!
+  It was a fun experience, because with the knowledges we've learned,
+  I could actually make something.
+  That had me a feeling of actually I was capable of being a programmer.
+  Well done!
 
 Nevertherless, there are a few things that I could improve more
 * How to patiently google
