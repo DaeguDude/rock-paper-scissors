@@ -14,9 +14,9 @@ Well done!
 Nevertherless, there are a few things that I could improve more
 * How to patiently google
 
-&nbsp;&nbsp;Because I often opt for the easy and quick solution, but I found myself that
-&nbsp;&nbsp;it's actually taking more time than I think, and becoming very unefficient.
-&nbsp;&nbsp;And most importantly, I learn nothing. So, google patiently, read questions & answers thoroughly.
+&nbsp;&nbsp;<p>Because I often opt for the easy and quick solution, but I found myself that
+it's actually taking more time than I think, and becoming very unefficient.
+And most importantly, I learn nothing. So, google patiently, read questions & answers thoroughly.</p>
 
 * Sorting the problems
 
