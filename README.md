@@ -20,7 +20,7 @@ Nevertherless, there are a few things that I could improve more
 
 * Sorting the problems
 
-When building a program, often I find myself jump to the other problems in the middle
+    When building a program, often I find myself jump to the other problems in the middle
 of other problems. And that causes me not being able to focus on one thing, and it seems
 impossible to actually program something. So I guess I first need to sort the problems,
 
