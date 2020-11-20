@@ -22,3 +22,5 @@ const computerPlay = () => {
   
   return computerSelection;
 }
+
+export { computerPlay };

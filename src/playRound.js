@@ -1,3 +1,9 @@
+import { Display } from './display.js';
+import { Game } from './Game.js';
+
+const display = Display();
+const game = Game();
+
 // SRP : Check if the selection is valid
 const isCorrectSelection = (selection) => {
   selection = selection.toLowerCase();
@@ -40,16 +46,26 @@ const playRound = (playerSelection, computerSelection) => {
     isCorrectSelection(playerSelection) 
     && isCorrectSelection(computerSelection) 
   ) {
+    // getResult function takes just lowercase
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
-    const result = getResult(playerSelection, computerSelection);
+    let result = getResult(playerSelection, computerSelection);
+
+    // display the result.
+    // update the score
     if (result === 'win') {
-      console.log('User Win');
+      result = `User Wins! ${playerSelection} beats ${computerSelection}`;
+      game.updateUserScore();
+      display.updateUserScore();
     } else if (result === 'draw') {
-      console.log('Draw!');
+      result = `Draw! ${playerSelection} ties with ${computerSelection}`;
     } else {
-      console.log('Lose!');
+      result = `User Loses! ${playerSelection} can't beat ${computerSelection}`;
+      game.updateComputerScore();
+      display.updateComputerScore();
     }
+
+    display.updateResult(result);
   } else {
     // Say it's not right input
     console.log('it doesnt seem really right to me...');
