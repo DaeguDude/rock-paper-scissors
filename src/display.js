@@ -13,11 +13,6 @@ const getScissorsBtn = () => {
   return document.querySelector('div#scissors button');
 }
 
-/**
- * Attach event listeners to each button. That will call 'playRound' with 
- * the right input
- */
-
 const enableRockBtnToPlayRound = () => {
   const rockBtn = getRockBtn();
   rockBtn.addEventListener('click', () => {
@@ -54,13 +49,13 @@ const getUserScoreSpan = () => {
   return document.querySelector('span#user-score');
 }
 
-const getComputerScoreSpan = () => {
-  return document.querySelector('span#computer-score');
-}
-
 const updateUserScore = (score) => {
   const userScoreSpan = getUserScoreSpan();
   userScoreSpan.innerText = score;
+}
+
+const getComputerScoreSpan = () => {
+  return document.querySelector('span#computer-score');
 }
 
 const updateComputerScore = (score) => {
@@ -74,7 +69,6 @@ const Display = () => {
     enablePaperBtnToPlayRound();
     enableScissorsBtnToPlayRound();
   }
-
 
   return {
     enableBtnsToPlayRound,

@@ -10,11 +10,12 @@ const getRandomInt = (min, max) => {
 
 const computerPlay = () => {
 
-  let computerSelection = getRandomInt(0, 2);
+  const randomNumber = getRandomInt(0, 2);
+  let computerSelection;
 
-  if (computerSelection === 0) {
+  if (randomNumber === 0) {
     computerSelection = 'Rock';
-  } else if(computerSelection === 1) {
+  } else if(randomNumber === 1) {
     computerSelection = 'Paper'
   } else {
     computerSelection = 'Scissors'

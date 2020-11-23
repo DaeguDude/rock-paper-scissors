@@ -6,40 +6,39 @@ import { Display } from './display.js';
 
 // Announce the winner of the game once one player reaches 5 points.
 const Game = () => {  
-  // How do you know once player reaches 5 points?
   const display = Display();
-  display.enableBtnsToPlayRound();
+  let userScore;
+  let computerScore;
+  // How do you know once player reaches 5 points?
+  
 
-  let userScore = 0;
   const updateUserScore = () => {
     userScore += 1;
-    isGameEnd();
-  
+    display.updateUserScore(userScore);
   }
 
-  let computerScore = 0;
   const updateComputerScore = () => {
     computerScore += 1;
-    isGameEnd();
+    display.updateComputerScore(computerScore);
+
   }
 
-  const isGameEnd = () => {
-    if (userScore === 5 || computerScore === 5) {
-      console.log(userScore);
-      console.log(computerScore);
-      console.log('Game End!');
-    }
+  const setUserAndComputerScoresToZero = () => {
+    userScore = 0;
+    computerScore = 0;
+  }
+
+
+  const startTheGame = () => {
+    display.enableBtnsToPlayRound();
+    setUserAndComputerScoresToZero();
   }
 
   return {
     updateUserScore,
     updateComputerScore,
+    startTheGame,
   }
-}
-
-const updateResult = () => {
-  userScore++;
-  computerScore++;
 }
 
 export { Game };

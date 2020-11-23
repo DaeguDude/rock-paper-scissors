@@ -4,12 +4,23 @@ import { Game } from './Game.js';
 const display = Display();
 const game = Game();
 
+/**
+ * Responsibility: 
+ *  Decide the winner.
+ *    1. Tell 'Display' to update the result.
+ *    2. Tell 'Game' to update the score
+ */
+
 // SRP : Check if the selection is valid
 const isCorrectSelection = (selection) => {
   selection = selection.toLowerCase();
   const availableSelection = ['rock', 'paper', 'scissors']
   
   return availableSelection.includes(selection);
+}
+
+const makeStringLowerCase = (str) => {
+  return str.toLowerCase();
 }
 
 
@@ -47,22 +58,19 @@ const playRound = (playerSelection, computerSelection) => {
     && isCorrectSelection(computerSelection) 
   ) {
     // getResult function takes just lowercase
-    playerSelection = playerSelection.toLowerCase();
-    computerSelection = computerSelection.toLowerCase();
+    playerSelection = makeStringLowerCase(playerSelection);
+    computerSelection = makeStringLowerCase(computerSelection);
     let result = getResult(playerSelection, computerSelection);
+    let resultMessage;
 
-    // display the result.
-    // update the score
     if (result === 'win') {
-      result = `User Wins! ${playerSelection} beats ${computerSelection}`;
+      resultMessage = `User Wins! ${playerSelection} beats ${computerSelection}`;
       game.updateUserScore();
-      display.updateUserScore();
     } else if (result === 'draw') {
-      result = `Draw! ${playerSelection} ties with ${computerSelection}`;
+      resultMessage = `Draw! ${playerSelection} ties with ${computerSelection}`;      
     } else {
-      result = `User Loses! ${playerSelection} can't beat ${computerSelection}`;
+      resultMessage = `User Loses! ${playerSelection} can't beat ${computerSelection}`;
       game.updateComputerScore();
-      display.updateComputerScore();
     }
 
     display.updateResult(result);
