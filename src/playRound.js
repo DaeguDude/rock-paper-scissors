@@ -1,8 +1,5 @@
-import { Display } from './display.js';
-import { Game } from './Game.js';
-
-const display = Display();
-const game = Game();
+import { display } from './display/display.js';
+import { game } from './Game.js';
 
 /**
  * Responsibility: 
@@ -65,15 +62,18 @@ const playRound = (playerSelection, computerSelection) => {
 
     if (result === 'win') {
       resultMessage = `User Wins! ${playerSelection} beats ${computerSelection}`;
-      game.updateUserScore();
     } else if (result === 'draw') {
       resultMessage = `Draw! ${playerSelection} ties with ${computerSelection}`;      
     } else {
       resultMessage = `User Loses! ${playerSelection} can't beat ${computerSelection}`;
-      game.updateComputerScore();
     }
 
-    display.updateResult(result);
+    display.updateResult(resultMessage);
+    if (result === 'win') {
+      game.updateUserScore();
+    } else if (result === 'lose') {
+      game.updateComputerScore();
+    } 
   } else {
     // Say it's not right input
     console.log('it doesnt seem really right to me...');
