@@ -1,4 +1,14 @@
-# rock-paper-scissors
+# REFACTORED!!
+
+Having difficulty of doing **TodoList** project more than 2.5 months, I had to understand that I have difficulty of separating the parts that will eventually build cool thing(TodoList). I was trying to do it in one go. I MUST separate things. Refactoring Rock Paper Scissors was sort of practice before actually jumping into the bigger one.
+
+- Here's the [live](https://daegudude.github.io/rock-paper-scissors/)
+
+- And here's the [source code](https://github.com/DaeguDude/rock-paper-scissors/tree/master/src) 
+
+I have used webpack to bundle things together.
+
+# ~~rock-paper-scissors(OUTDATED)~~
 
 This is a part of project of The Odin Project.
 
@@ -24,4 +34,6 @@ And most importantly, I learn nothing. So, google patiently, read questions & an
 of other problems. And that causes me not being able to focus on one thing, and it seems
 impossible to actually program something. So I guess I first need to sort the problems, and work on 
 one at a time
+
+
 
